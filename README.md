@@ -130,7 +130,7 @@ Full guideline: https://github.com/spreka/annotatorj/blob/master/AnnotatorJ_docu
 - Restart Fiji after the update
 -  Plugin --> AnnotatorJ
 - Ppen an image and choose instance segmentation
-- Activate "contour assist" and make sure it uses U-net backbone ("...")
+- Activate "contour assist" and "smoothing" and make sure it uses U-net backbone (check with"...")
 - Annotate semi-automatically and revise (the brushing feature will be automatically activated)
 - Press "q" to add and "crtl+del" to remove an annotation
 - Issue for classification (to be solved) only works for two classes (non and one other class)
