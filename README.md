@@ -63,10 +63,7 @@ and Walter, Alison E.
 and Arena, Ellen T.
 and Eliceiri, Kevin W.}
 }
-
-
 ```
-
 
 ## Manual instance segmentation with ImageJ
 We used ImageJ software to perform manual nuclei instance segmentation. We followed these steps to annotate the images manually:
