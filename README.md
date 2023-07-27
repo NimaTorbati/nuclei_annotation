@@ -123,10 +123,10 @@ Note:
 Full guideline: https://github.com/spreka/annotatorj/blob/master/AnnotatorJ_documentation.pdf
 - Follow the instructions to add a Fiji update site to your Fiji installation: https://imagej.net/update-sites/following
 - When prompted for the update site info, enter the following: URL: https://sites.imagej.net/Spreka/ and Name: AnnotatorJ
-- download "models.zip" from: https://github.com/spreka/annotatorj/releases/tag/v0.0.2-model and extract it. Then paste the "model" folder to where you have Fiji and in "plugins" folder (the model folder should contain three files: AnnotatorJconfig.txt, model_real.json and model_real_weights.h5)
 - Restart Fiji after the update
+- Download "models.zip" from: https://github.com/spreka/annotatorj/releases/tag/v0.0.2-model and extract it. Then paste the "model" folder to where you have Fiji and in "plugins" folder (the model folder should contain three files: AnnotatorJconfig.txt, model_real.json and model_real_weights.h5)
 -  Plugin --> AnnotatorJ
-- Ppen an image and choose instance segmentation
+- Open an image and choose instance segmentation
 - Activate "contour assist" and "smoothing" and make sure it uses U-net backbone (check with"...")
 - Annotate semi-automatically and revise (the brushing feature will be automatically activated)
 - Press "q" to add and "crtl+del" to remove an annotation
