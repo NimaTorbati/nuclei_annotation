@@ -11,9 +11,9 @@ performing nuclei annotation (manually or semi-automatically) using ImageJ
 [Manual instance segmentation and classification with ImageJ](#manual-instance-segmentation-and-classification-with-imagej)
 
 
-[Semiautomatic annotation with ImageJ](#semiautomatic-annotation-with-imagej)
+[Semiautomatic instance segmentation with ImageJ and AnnotatorJ](#semiautomatic-instance-segmentation-with-imagej-and-annotatorj)
 
-[Codes to generate segmentation masks](#codes-to-generate-segmentation-masks)
+[Codes to generate instance segmentation masks](#codes-to-generate-instance-segmentation-masks)
 
 
 
@@ -122,7 +122,18 @@ Note:
   ![Project Image](https://github.com/masih4/nuclei_annotation/blob/main/figure%203.jpg)
 
 
-## Semiautomatic annotation with ImageJ
+## Semiautomatic segmentation with ImageJ and AnnotatorJ (instance segmentation and classification)
+Full guideline: https://github.com/spreka/annotatorj/blob/master/AnnotatorJ_documentation.pdf
+- Follow the instructions to add a Fiji update site to your Fiji installation: https://imagej.net/update-sites/following
+- When prompted for the update site info, enter the following: URL: https://sites.imagej.net/Spreka/ and Name: AnnotatorJ
+- download "models.zip" from: https://github.com/spreka/annotatorj/releases/tag/v0.0.2-model and extract it. Then paste the "model" folder to where you have Fiji and in "plugins" folder (the model folder should contain three files: AnnotatorJconfig.txt, model_real.json and model_real_weights.h5)
+- Restart Fiji after the update
+-  Plugin --> AnnotatorJ
+- Ppen an image and choose instance segmentation
+- Activate "contour assist" and make sure it uses U-net backbone ("...")
+- Annotate semi-automatically and revise (the brushing feature will be automatically activated)
+- Press "q" to add and "crtl+del" to remove an annotation
+- Issue for classification (to be solved) only works for two classes (non and one other class)
 
 
 ## Codes to generate instance segmentation masks
