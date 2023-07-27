@@ -81,8 +81,13 @@ We used ImageJ software to perform manual nuclei instance segmentation. We follo
 - A zip file containing all ROI files will be created after saving the outputs (each ROI file represent one of the nuclei)
 - The created zip file can be later processed with Matlab or Python (create labeled masks, binary masks, etc.)
 - ROI files are essential for further analysis, but the overlay images in ImageJ can also be saved for visualization:<br>
-  1- select all ROI --> properties --> Fill color (e.g,. yellow) --> apply for all (this step in optional)
+  1- (this step is optional) select all ROI --> properties --> Fill color (e.g,. yellow) --> apply for all 
   2- in ImageJ --> image --> overlay --> flatten --> save image
+
+  ![Project Image](https://github.com/masih4/nuclei_annotation/blob/main/figure%202.jpg)
+
+
+  
 
 ## Manual instance segmentation and classification with ImageJ
 Consider that we have two classes. The following instructions can be easily extended in case of more nuclei classes.
@@ -103,15 +108,23 @@ Consider that we have two classes. The following instructions can be easily exte
   
 - When you are done with all nuclei for both classes, then:<br>
   Select all instances   --> save the outputs with ROI manager--> More --> Save (create a zip file with instances of all classes)
+  
 
 Note: 
 - The class of instance can be changed using the "properties" option
 - Other numbers for each class can be selected (each number represents a color e.g., number 3 for green)
 
+- ROI files are essential for further analysis, but the overlay images in ImageJ can also be saved for visualization:<br>
+  1- (this step is optional) select all ROI of class 1 --> properties --> Fill color (e.g,. yellow) --> apply for all
+  2- (this step is optional) select all ROI of class 2 --> properties --> Fill color (e.g,. red) --> apply for all
+  2- in ImageJ --> image --> overlay --> flatten --> save image
+  
+  ![Project Image](https://github.com/masih4/nuclei_annotation/blob/main/figure%203.jpg)
 
 
 ## Semiautomatic annotation with ImageJ
 
 
-## Codes to generate segmentation masks
+## Codes to generate instance segmentation masks
 The codes are available on the CryoNuSeg repository: https://github.com/masih4/CryoNuSeg/tree/master 
+To generate instance segmentation and classification masks, these codes need to be adapted (will be updated)
