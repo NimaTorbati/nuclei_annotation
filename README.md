@@ -1,6 +1,8 @@
 # Nuclei annotation
 performing nuclei annotation (manually or semi-automatically) using ImageJ
 
+![Project Image](https://github.com/masih4/nuclei_annotation/blob/main/figure_1.png)
+
 ## Table of Contents 
 [Citation](#citation)
 
@@ -42,6 +44,27 @@ year = "2020",
 doi = "10.1091/mbc.E20-02-0156",
 author = "Hollandi, R\'{e}ka and Di\'{o}sdi, \'{A}kos and Hollandi, G\'{a}bor and Moshkov, Nikita and Horv\'{a}th, P\'{e}ter"
 }
+```
+
+```
+@article{Rueden2017,
+title={ImageJ2: ImageJ for the next generation of scientific image data},
+journal={BMC Bioinformatics},
+volume={18},
+number={1},
+pages={529},
+year={2017},
+doi={10.1186/s12859-017-1934-z},
+author={Rueden, Curtis T.
+and Schindelin, Johannes
+and Hiner, Mark C.
+and DeZonia, Barry E.
+and Walter, Alison E.
+and Arena, Ellen T.
+and Eliceiri, Kevin W.}
+}
+
+
 ```
 
 
