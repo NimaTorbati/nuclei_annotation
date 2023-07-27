@@ -79,7 +79,10 @@ We used ImageJ software to perform manual nuclei instance segmentation. We follo
 - Manually annotate the border for each object and press "T". To remove an object select the labeled number inside the object and then press "Delete" to remove an ROI 
 - When you are done with all nuclei, save the outputs with ROI manager--> More --> Save
 - A zip file containing all ROI files will be created after saving the outputs (each ROI file represent one of the nuclei)
-- The created zip file can be later processed with Matlab (create labeled masks, binary masks, etc)
+- The created zip file can be later processed with Matlab or Python (create labeled masks, binary masks, etc.)
+- ROI files are essential for further analysis, but the overlay images in ImageJ can also be saved for visualization:<br>
+  1- select all ROI --> properties --> Fill color (e.g,. yellow) --> apply for all (this step in optional)
+  2- in ImageJ --> image --> overlay --> flatten --> save image
 
 ## Manual instance segmentation and classification with ImageJ
 Consider that we have two classes. The following instructions can be easily extended in case of more nuclei classes.
@@ -90,22 +93,20 @@ Consider that we have two classes. The following instructions can be easily exte
 - From the selection options, select "freehand selection"
 - From tabs:  Analyse --> Tools --> ROI manager. Ensure that both "show all" and "labels" are activated in the ROI manager.
   
-  #### For class one: ROI -->set default group (0 represents yellow )
+  #### For class one: ROI --> set default group (e.g., 0 represents yellow)
 - Zoom in/out to have a clear view of the image and all instances
-- Manually annotate the border for each object and press "T". To remove an object select the labeled number inside the object and then press "Delete" to remove an ROI
+- Manually annotate the border for each object for the first class and press "T". To remove an object select the labeled number inside the object and then press "Delete" to remove an ROI
   
-  #### For class two: ROI -->set default group (2 represents red )
+  #### For class two: ROI -->set default group (e.g., 2 represents red)
 - Zoom in/out to have a clear view of the image and all instances
-- Manually annotate the border for each object and press "T". To remove an object select the labeled number inside the object and then press "Delete" to remove an ROI
+- Manually annotate the border for each object for the second class and press "T". To remove an object select the labeled number inside the object and then press "Delete" to remove an ROI
   
 - When you are done with all nuclei for both classes, then:<br>
-1- ROI --> select group 0 --> save the outputs with ROI manager--> More --> Save (create a zip file with instances of class 1)<br>
-2- ROI --> select group 1 --> save the outputs with ROI manager--> More --> Save (create a zip file with instances of class 2)<br>
-3- Select all instances   --> save the outputs with ROI manager--> More --> Save (create a zip file with instances of all classes)
+  Select all instances   --> save the outputs with ROI manager--> More --> Save (create a zip file with instances of all classes)
 
 Note: 
 - The class of instance can be changed using the "properties" option
-- Other numbers for each class can be selected (each number represents a color e.g. number 3 for green)
+- Other numbers for each class can be selected (each number represents a color e.g., number 3 for green)
 
 
 
