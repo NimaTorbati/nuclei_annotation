@@ -112,9 +112,9 @@ Note:
 - Other numbers for each class can be selected (each number represents a color e.g., number 3 for green)
 
 - ROI files are essential for further analysis, but the overlay images in ImageJ can also be saved for visualization:<br>
-  1- (this step is optional) select all ROI of class 1 --> properties --> Fill color (e.g,. yellow) --> apply for all
-  2- (this step is optional) select all ROI of class 2 --> properties --> Fill color (e.g,. red) --> apply for all
-  2- in ImageJ --> image --> overlay --> flatten --> save image
+  -(this step is optional) select all ROI of class 1 --> properties --> Fill color (e.g,. yellow) --> apply for all
+  -(this step is optional) select all ROI of class 2 --> properties --> Fill color (e.g,. red) --> apply for all
+  -in ImageJ --> image --> overlay --> flatten --> save image
   
   ![Project Image](https://github.com/masih4/nuclei_annotation/blob/main/figure%203.jpg)
 
