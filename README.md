@@ -78,8 +78,8 @@ We used ImageJ software to perform manual nuclei instance segmentation. We follo
 - A zip file containing all ROI files will be created after saving the outputs (each ROI file represent one of the nuclei)
 - The created zip file can be later processed with Matlab or Python (create labeled masks, binary masks, etc.)
 - ROI files are essential for further analysis, but the overlay images in ImageJ can also be saved for visualization:<br>
-  1- (this step is optional) select all ROI --> properties --> Fill color (e.g,. yellow) --> apply for all 
-  2- in ImageJ --> image --> overlay --> flatten --> save image
+  1- (this step is optional) select all ROI --> properties --> Fill color (e.g,. yellow) --> apply for all <br>
+  2- in ImageJ --> image --> overlay --> flatten --> save image <br>
 
   ![Project Image](https://github.com/masih4/nuclei_annotation/blob/main/figure%202.jpg)
 
@@ -112,9 +112,9 @@ Note:
 - Other numbers for each class can be selected (each number represents a color e.g., number 3 for green)
 
 - ROI files are essential for further analysis, but the overlay images in ImageJ can also be saved for visualization:<br>
-  -(this step is optional) select all ROI of class 1 --> properties --> Fill color (e.g,. yellow) --> apply for all
-  -(this step is optional) select all ROI of class 2 --> properties --> Fill color (e.g,. red) --> apply for all
-  -in ImageJ --> image --> overlay --> flatten --> save image
+1-(this step is optional) select all ROI of class 1 --> properties --> Fill color (e.g,. yellow) --> apply for all <br>
+2-(this step is optional) select all ROI of class 2 --> properties --> Fill color (e.g,. red) --> apply for all <br>
+3-in ImageJ --> image --> overlay --> flatten --> save image <br>
   
   ![Project Image](https://github.com/masih4/nuclei_annotation/blob/main/figure%203.jpg)
 
