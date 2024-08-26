@@ -1,7 +1,13 @@
 # Nuclei annotation
 performing nuclei annotation (manually or semi-automatically) using ImageJ
 
-![Project Image](https://github.com/masih4/nuclei_annotation/blob/main/git_figures/figure_1.png)
+<p align="center">
+  <img src="https://github.com/masih4/nuclei_annotation/blob/main/git_figures/figure_1.png" alt="Description of the image" width="80%"/>
+  <br>
+  <em>Figure 1: Main tools.</em>
+</p>
+
+
 
 ## Table of Contents 
 [Citation](#citation)
@@ -81,7 +87,12 @@ We used ImageJ software to perform manual nuclei instance segmentation. We follo
   1- (this step is optional) select all ROI --> properties --> Fill color (e.g,. yellow) --> apply for all <br>
   2- in ImageJ --> image --> overlay --> flatten --> save image <br>
 
-  ![Project Image](https://github.com/masih4/nuclei_annotation/blob/main/git_figures/figure%202.jpg)
+<p align="center">
+  <img src="https://github.com/masih4/nuclei_annotation/blob/main/git_figures/figure%202.jpg" alt="Description of the image" width="50%"/>
+  <br>
+  <em>Figure 2: Example of manual instance segmentation with ImageJ.</em>
+</p>
+
 
 
   
@@ -95,11 +106,11 @@ Consider that we have two classes. The following instructions can be easily exte
 - From the selection options, select "freehand selection"
 - From tabs:  Analyse --> Tools --> ROI manager. Ensure that both "show all" and "labels" are activated in the ROI manager.
   
-  #### For class one: ROI --> set default group (e.g., 0 represents yellow)
+  #### For class one: "ROI" in the main tools (see Figure 1) --> set default group (e.g., 0 represents yellow)
 - Zoom in/out to have a clear view of the image and all instances
 - Manually annotate the border for each object for the first class and press "T". To remove an object select the labeled number inside the object and then press "Delete" to remove an ROI
   
-  #### For class two: ROI -->set default group (e.g., 2 represents red)
+  #### For class two: "ROI" in the main tools (see Figure 1) --> set default group (e.g., 2 represents red)
 - Zoom in/out to have a clear view of the image and all instances
 - Manually annotate the border for each object for the second class and press "T". To remove an object select the labeled number inside the object and then press "Delete" to remove an ROI
   
@@ -116,7 +127,11 @@ Note:
 2-(this step is optional) select all ROI of class 2 --> properties --> Fill color (e.g,. red) --> apply for all <br>
 3-in ImageJ --> image --> overlay --> flatten --> save image <br>
   
-  ![Project Image](https://github.com/masih4/nuclei_annotation/blob/main/git_figures/figure%203.jpg)
+<p align="center">
+  <img src="https://github.com/masih4/nuclei_annotation/blob/main/git_figures/figure%203.jpg" alt="Description of the image" width="50%"/>
+  <br>
+  <em>Figure 3: Example of manual instance segmentation and classification with ImageJ. Two classes are represented with yellow and red colors. </em>
+</p>
 
 
 ## Semiautomatic segmentation with ImageJ and AnnotatorJ (instance segmentation and classification)
@@ -130,9 +145,14 @@ Full guideline: https://github.com/spreka/annotatorj/blob/master/AnnotatorJ_docu
 - Activate "contour assist" and "smoothing" and make sure it uses U-net backbone (check with"...")
 - Annotate semi-automatically and revise (the brushing feature will be automatically activated)
 - Press "q" to add and "crtl+del" to remove an annotation
-- Issue for classification (to be solved) only works for two classes (non and one other class)
 
 
-## Codes to generate instance segmentation masks
+
+## Codes to generate instance segmentation masks (only one class)
 The codes are available on the CryoNuSeg repository: https://github.com/masih4/CryoNuSeg/tree/master 
-To generate instance segmentation and classification masks, these codes need to be adapted (will be updated)
+
+
+## Codes to generate instance segmentation and classification masks (more than one classes)
+<a href="https://github.com/masih4/CryoNuSeg/tree/master/codes/manual_masks_generator
+">codes folder</a>
+
