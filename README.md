@@ -1,7 +1,7 @@
 # Nuclei annotation
 performing nuclei annotation (manually or semi-automatically) using ImageJ
 
-![Project Image](https://github.com/masih4/nuclei_annotation/blob/main/figure_1.png)
+![Project Image](https://github.com/masih4/nuclei_annotation/blob/main/git_figures/figure_1.png)
 
 ## Table of Contents 
 [Citation](#citation)
@@ -81,7 +81,7 @@ We used ImageJ software to perform manual nuclei instance segmentation. We follo
   1- (this step is optional) select all ROI --> properties --> Fill color (e.g,. yellow) --> apply for all <br>
   2- in ImageJ --> image --> overlay --> flatten --> save image <br>
 
-  ![Project Image](https://github.com/masih4/nuclei_annotation/blob/main/figure%202.jpg)
+  ![Project Image](https://github.com/masih4/nuclei_annotation/blob/main/git_figures/figure%202.jpg)
 
 
   
@@ -116,7 +116,7 @@ Note:
 2-(this step is optional) select all ROI of class 2 --> properties --> Fill color (e.g,. red) --> apply for all <br>
 3-in ImageJ --> image --> overlay --> flatten --> save image <br>
   
-  ![Project Image](https://github.com/masih4/nuclei_annotation/blob/main/figure%203.jpg)
+  ![Project Image](https://github.com/masih4/nuclei_annotation/blob/main/git_figures/figure%203.jpg)
 
 
 ## Semiautomatic segmentation with ImageJ and AnnotatorJ (instance segmentation and classification)
