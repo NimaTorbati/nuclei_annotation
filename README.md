@@ -167,4 +167,52 @@ The codes are available on the CryoNuSeg repository: https://github.com/masih4/C
 ## Codes to generate instance segmentation and classification masks (more than one classes)
 <a href="https://github.com/masih4/nuclei_annotation/tree/main/manual_masks_generator
 ">codes folder</a>
+### Example directory structure for two classes
+```
+.
+├── code
+|   ├── manual_masks_generator_multi_classes
+│       ├── tempfolder (folder)
+│       ├── example_test.m
+│       ├── masks_generator.m
+│       ├── ReadImageJROI.m
+│       ├── ROIs2Regions.m
+│       └── unetwmap.m
+│
+│
+└── data
+    ├── class_1_annotations
+        ├── distance_maps (folder)
+        ├── label_masks (folder)
+        ├── label_masks_modify (folder)
+        ├── mask_binary (folder)
+        ├── mask_binary_without_border (folder)
+        ├── mask_binary_without_border_erode (folder)
+        ├── nuclei_border (folder)
+        ├── overlay_save_path (folder)
+        ├── stacked_mask (folder)
+        ├── weighted_maps (folder)
+        └── weighted_maps_erode (folder)
+
+    ├── class_2_annotations
+        ├── distance_maps (folder)
+        ├── label_masks (folder)
+        ├── label_masks_modify (folder)
+        ├── mask_binary (folder)
+        ├── mask_binary_without_border (folder)
+        ├── mask_binary_without_border_erode (folder)
+        ├── nuclei_border (folder)
+        ├── overlay_save_path (folder)
+        ├── stacked_mask (folder)
+        ├── weighted_maps (folder)
+        └── weighted_maps_erode (folder)
+    ├── imageJ_zips
+    ├── images
+        ├── DAPI (folder)
+        ├── GFP (folder)
+        ├── Texas (folder)
+        └── Merged (folder)
+    └── stats.csv
+```    
+ ### contact: amirreza.mahbod@dp-uni.ac.at
 
