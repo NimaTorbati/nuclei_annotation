@@ -17,9 +17,13 @@ performing nuclei annotation (manually or semi-automatically) using ImageJ
 [Manual instance segmentation and classification with ImageJ](#manual-instance-segmentation-and-classification-with-imagej)
 
 
-[Semiautomatic instance segmentation with ImageJ and AnnotatorJ](#semiautomatic-instance-segmentation-with-imagej-and-annotatorj)
+[Semi automatic segmentation with ImageJ and AnnotatorJ (instance segmentation and classification)](#semi-automatic-segmentation-with-imagej-and-annotatorj-instance-segmentation-and-classification)
 
-[Codes to generate instance segmentation masks](#codes-to-generate-instance-segmentation-masks)
+[Codes to generate instance segmentation masks (only one class)](#codes-to-generate-instance-segmentation-masks-only-one-class)
+
+[Codes to generate instance segmentation and classification masks (more than one classes)](#codes-to-generate-instance-segmentation-and-classification-masks-more-than-one-classes)
+
+
 
 
 
@@ -134,25 +138,33 @@ Note:
 </p>
 
 
-## Semiautomatic segmentation with ImageJ and AnnotatorJ (instance segmentation and classification)
-Full guideline: https://github.com/spreka/annotatorj/blob/master/AnnotatorJ_documentation.pdf
+## Semi automatic segmentation with ImageJ and AnnotatorJ (instance segmentation and classification)
+#### set up AnnotatorJ
+- Full guideline: https://github.com/spreka/annotatorj/blob/master/AnnotatorJ_documentation.pdf
 - Follow the instructions to add a Fiji update site to your Fiji installation: https://imagej.net/update-sites/following
 - When prompted for the update site info, enter the following: URL: https://sites.imagej.net/Spreka/ and Name: AnnotatorJ
 - Restart Fiji after the update
 - Download "models.zip" from: https://github.com/spreka/annotatorj/releases/tag/v0.0.2-model and extract it. Then paste the "model" folder to where you have Fiji and in "plugins" folder (the model folder should contain three files: AnnotatorJconfig.txt, model_real.json and model_real_weights.h5)
--  Plugin --> AnnotatorJ
+#### instructions
+- Plugin --> AnnotatorJ
 - Open an image and choose instance segmentation
 - Activate "contour assist" and "smoothing" and make sure it uses U-net backbone (check with"...")
+##### For class one: "ROI" in the main tools (see Figure 1) --> set default group (e.g., 0 represents yellow)
 - Annotate semi-automatically and revise (the brushing feature will be automatically activated)
+##### For class two: "ROI" in the main tools (see Figure 1) --> set default group (e.g., 2 represents red)
+- Annotate semi-automatically and revise (the brushing feature will be automatically activated)
+
+Notes:
 - Press "q" to add and "crtl+del" to remove an annotation
+- also look at the notes for "Manual instance segmentation and classification with ImageJ"
 
 
 
-## Codes to generate instance segmentation masks (only one class)
+## Codes to generate instance segmentation masks only one class
 The codes are available on the CryoNuSeg repository: https://github.com/masih4/CryoNuSeg/tree/master 
 
 
 ## Codes to generate instance segmentation and classification masks (more than one classes)
-<a href="https://github.com/masih4/CryoNuSeg/tree/master/codes/manual_masks_generator
+<a href="https://github.com/masih4/nuclei_annotation/tree/main/manual_masks_generator
 ">codes folder</a>
 
