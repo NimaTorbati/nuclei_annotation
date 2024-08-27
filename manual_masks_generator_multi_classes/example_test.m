@@ -7,7 +7,7 @@ size_target = 512;
 imagej_zips_path = '..\..\data\imageJ_zips\';
 raw_imgs_path = '..\..\data\images\DAPI\';
 results_path = '..\..\data\';
-num_classes = 2;
+num_classes = 3;
 
 
 masks_generator(size_target, imagej_zips_path, raw_imgs_path, results_path, num_classes)

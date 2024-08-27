@@ -25,7 +25,7 @@ function  masks_generator(size_target,imagej_zips_path,raw_imgs_path, results_pa
 %          --------- distance maps                    (this directory will be created while running the code)
 %          --------- weighted_maps                    (this directory will be created while running the code)
 %          --------- weighted_maps_erode              (this directory will be created while running the code)
-%          --------- overlay_save_path                (this directory will be created while running the code)
+%          --------- overlay                          (this directory will be created while running the code)
 %          --------- nuclie border                    (this directory will be created while running the code)     
 
 
@@ -33,7 +33,7 @@ function  masks_generator(size_target,imagej_zips_path,raw_imgs_path, results_pa
 
 imagej_zips = dir(strcat(imagej_zips_path,'*.zip'));
 raw_imgs = dir(strcat(raw_imgs_path,'*.png'));
-data = {}
+data = {};
 
 %% creating required dirs
 for counter=1:num_classes
@@ -44,7 +44,7 @@ for counter=1:num_classes
     mkdir(strcat(results_path,'class_' , string(counter),'_annotations\','distance_maps'));
     mkdir(strcat(results_path,'class_' , string(counter),'_annotations\','weighted_maps'));
     mkdir(strcat(results_path,'class_' , string(counter),'_annotations\','weighted_maps_erode'));
-    mkdir(strcat(results_path,'class_' , string(counter),'_annotations\','overlay_save_path'));
+    mkdir(strcat(results_path,'class_' , string(counter),'_annotations\','overlay'));
     mkdir(strcat(results_path,'class_' , string(counter),'_annotations\','label_masks_modify'));
     mkdir(strcat(results_path,'class_' , string(counter),'_annotations\','stacked_mask'));
     mkdir(strcat(results_path,'class_' , string(counter),'_annotations\','nuclei_border\disk1'));
@@ -79,7 +79,7 @@ for counter = 1:length(imagej_zips) %loop over images
     end
    % Get unique values
    uniqueStrokeColors = unique(strokeColors);
-   color_opt = {'b', 'r', 'g'};
+   color_opt = {'#77AC30', 'r', '#FFFFFF'}; %green = "#77AC30", '#FFFFFF' = white
 
    for ii = 1:length(uniqueStrokeColors)
        nuc_class_count = 0;
@@ -197,7 +197,8 @@ for counter = 1:length(imagej_zips) %loop over images
                original2(:,:,2) = original_g;
                original2(:,:,3) = original_b;
                fig = figure('Renderer', 'painters', 'Position', [10 10 1500 750]);
-               subplot(1,2,2);imshow(original2); title({'overlay'},'FontSize', 22);
+               %subplot(1,2,2);imshow(original2);%title({'overlay'},'FontSize', 22); %with white fill in
+               subplot(1,2,2);imshow(original); title({'overlay'},'FontSize', 22);
                for i=1:length(ROIs)
                    dum = mask_overlap;
                    dum(mask_overlap~=i)=0;
@@ -206,7 +207,11 @@ for counter = 1:length(imagej_zips) %loop over images
                end
                subplot(1,2,1);imshow(original);title({'cropped image'},'FontSize', 22);
     
-               save_path_overlay = strcat(results_path,'class_' , string(ii),'_annotations\','overlay_save_path','\',raw_imgs(counter).name);
+               save_path_overlay = strcat(results_path,'class_' , string(ii),'_annotations\','overlay','\',raw_imgs(counter).name);
+               % for white border (otherwise the borders will turn balcj after saving)
+               if color_opt{ii}=='#FFFFFF'
+                   set(gcf, 'InvertHardCopy', 'off');
+               end
                saveas(fig, save_path_overlay);
     
                mask_overlap = zeros(size_target,size_target);
@@ -219,7 +224,7 @@ for counter = 1:length(imagej_zips) %loop over images
    fprintf('%s has totally %d nuclei\n', raw_imgs(counter).name, object_count_tot(1, counter));
    fprintf('==========\n')
    delete tempfolder\*.roi
-   data = [data; {raw_imgs(counter).name, object_count_tot(1, counter), object_count_tot(2, counter), object_count_tot(3, counter)}];
+   data = [data; {raw_imgs(counter).name, object_count_tot(1, counter), object_count_tot(2, counter), object_count_tot(3, counter), object_count_tot(4, counter)}];
    end
 
    fprintf('All images have %d nuclei\n', sum(object_count_tot(1,:)));
@@ -233,10 +238,10 @@ for counter = 1:length(imagej_zips) %loop over images
    sum_value3 = sum(cell2mat(data(:,4)));
 
    % Append the sum as the last row (with a label 'Total')
-   data = [data; {'Total', sum_value1, sum_value2, sum_value3}];
+   data = [data; {'Total', sum_value1, sum_value2, sum_value3, sum_value3}];
 
    % Convert the cell array to a table
-   T = cell2table(data, 'VariableNames', {'Name', 'total_nuclei', 'class1_nuclei', 'class2_nuclei'});
+   T = cell2table(data, 'VariableNames', {'Name', 'total_nuclei', 'class1_nuclei', 'class2_nuclei', 'class3_nuclei'});
 
    % Write the table to a CSV file
    writetable(T, strcat(results_path ,'stats.csv'));
