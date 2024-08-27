@@ -213,6 +213,12 @@ The codes are available on the CryoNuSeg repository: https://github.com/masih4/C
         ├── Texas (folder)
         └── Merged (folder)
     └── stats.csv
-```    
- ### contact: amirreza.mahbod@dp-uni.ac.at
+```
+
+### some general notes for naming:
+- Avoid using spaces in file names (e.g., tile 10 → tile_10).
+- Use leading zeros for numbering (e.g., tile_1 → tile_01).
+- Use lowercase letters instead of capital letters (e.g., Tile → tile).
+  
+### contact: amirreza.mahbod@dp-uni.ac.at
 
