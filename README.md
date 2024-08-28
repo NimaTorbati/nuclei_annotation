@@ -21,7 +21,7 @@ performing nuclei annotation (manually or semi-automatically) using ImageJ
 
 [Codes to generate instance segmentation masks (only one class)](#codes-to-generate-instance-segmentation-masks-only-one-class)
 
-[Codes to generate instance segmentation and classification masks (more than one classes)](#codes-to-generate-instance-segmentation-and-classification-masks-more-than-one-classes)
+[Codes to generate instance segmentation and classification masks (more than one class)](#codes-to-generate-instance-segmentation-and-classification-masks-more-than-one-classes)
 
 
 
@@ -85,10 +85,10 @@ We used ImageJ software to perform manual nuclei instance segmentation. We follo
 - From the selection options, select "freehand selection"
 - Manually annotate the border for each object and press "T". To remove an object select the labeled number inside the object and then press "Delete" to remove an ROI 
 - When you are done with all nuclei, save the outputs with ROI manager--> More --> Save
-- A zip file containing all ROI files will be created after saving the outputs (each ROI file represent one of the nuclei)
-- The created zip file can be later processed with Matlab or Python (create labeled masks, binary masks, etc.)
+- A zip file containing all ROI files will be created after saving the outputs (each ROI file represents one of the nuclei)
+- The created zip file can be later processed with Matlab or Python (create labelled masks, binary masks, etc.)
 - ROI files are essential for further analysis, but the overlay images in ImageJ can also be saved for visualization:<br>
-  1- (this step is optional) select all ROI --> properties --> Fill color (e.g,. yellow) --> apply for all <br>
+  1- (this step is optional) Select all ROI --> properties --> Fill colour (e.g, yellow) --> apply for all <br>
   2- in ImageJ --> image --> overlay --> flatten --> save image <br>
 
 <p align="center">
@@ -134,7 +134,7 @@ Note:
 <p align="center">
   <img src="https://github.com/masih4/nuclei_annotation/blob/main/git_figures/figure%203.jpg" alt="Description of the image" width="50%"/>
   <br>
-  <em>Figure 3: Example of manual instance segmentation and classification with ImageJ. Two classes are represented with yellow and red colors. </em>
+  <em>Figure 3: Example of manual instance segmentation and classification with ImageJ. Two classes are represented with yellow and red colours. </em>
 </p>
 
 
@@ -144,7 +144,7 @@ Note:
 - Follow the instructions to add a Fiji update site to your Fiji installation: https://imagej.net/update-sites/following
 - When prompted for the update site info, enter the following: URL: https://sites.imagej.net/Spreka/ and Name: AnnotatorJ
 - Restart Fiji after the update
-- Download "models.zip" from: https://github.com/spreka/annotatorj/releases/tag/v0.0.2-model and extract it. Then paste the "model" folder to where you have Fiji and in "plugins" folder (the model folder should contain three files: AnnotatorJconfig.txt, model_real.json and model_real_weights.h5)
+- Download "models.zip" from: https://github.com/spreka/annotatorj/releases/tag/v0.0.2-model and extract it. Then paste the "model" folder to where you have Fiji and in the "plugins" folder (the model folder should contain three files: AnnotatorJconfig.txt, model_real.json and model_real_weights.h5)
 #### instructions
 - Plugin --> AnnotatorJ
 - Open an image and choose instance segmentation
@@ -155,7 +155,7 @@ Note:
 - Annotate semi-automatically and revise (the brushing feature will be automatically activated)
 
 Notes:
-- Press "q" to add and "crtl+del" to remove an annotation
+- Press "q" to add an "crtl+del" to remove an annotation
 - also look at the notes for "Manual instance segmentation and classification with ImageJ"
 
 
@@ -164,7 +164,7 @@ Notes:
 The codes are available on the CryoNuSeg repository: https://github.com/masih4/CryoNuSeg/tree/master 
 
 
-## Codes to generate instance segmentation and classification masks (more than one classes)
+## Codes to generate instance segmentation and classification masks (more than one class)
 <a href="https://github.com/masih4/nuclei_annotation/tree/main/manual_masks_generator
 ">codes folder</a>
 ### Example directory structure for two classes
@@ -215,7 +215,7 @@ The codes are available on the CryoNuSeg repository: https://github.com/masih4/C
     └── stats.csv
 ```
 
-### some general notes for naming:
+### Some general notes for naming:
 - Avoid using spaces in file names (e.g., tile 10 → tile_10).
 - Use leading zeros for numbering (e.g., tile_1 → tile_01).
 - Use lowercase letters instead of capital letters (e.g., Tile → tile).
